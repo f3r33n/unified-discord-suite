@@ -29,6 +29,17 @@ Both bots operate using asynchronous runtime event loops managed via `discord.py
 3. API Routing: Python forwards the asynchronous payload to the Cohere natural language processing model.
 4. Dispatch: The parsed response is securely piped back and sent to the corresponding chat channel or private DM.
 
+
+   Optimization Mechanics
+
+Both bots operate using asynchronous runtime event loops managed via `discord.py` to monitor active server text streams and incoming private DMs. 
+
+# 💡 Core Optimization Features:
+* Token Conservation Layer: To prevent unnecessary and costly API token consumption, Monday runs on a hybrid framework. It intercepts input strings locally to process custom commands and formatted static structural replies instantly, bypassing the AI backend whenever possible.
+* Autonomous Interjection Control: Rather than requiring explicit user pings every time, both agents utilize ambient context-awareness. They analyze the local text environment asynchronously, evaluating conditions to dynamically determine if they should jump into the discussion or stay passive.
+* Secure API Routing: When dynamic generation is necessary, Python restructures the payload text with targeted system personality variables and forwards it securely via environment variables (`.env`) to the "Cohere NLP model".
+
+  
  📂 Repository Layout
 
 ```text
