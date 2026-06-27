@@ -35,7 +35,7 @@ Both bots operate using asynchronous runtime event loops managed via `discord.py
 astromind-ecosystem/
 ├── README.md               <- Project presentation & architectural overview
 ├── requirements.txt         <- Core package dependencies
-├── bot_alpha/               <- Moonday source directory
+├── bot_alpha/               <- Monday source directory
 │   └── main.py              
 └── bot_beta/                <- Oracle source directory
     └── main.py
